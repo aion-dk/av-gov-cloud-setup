@@ -13,10 +13,4 @@ data "aws_iam_policy_document" "this" {
       "${aws_s3_bucket.this.arn}/*",
     ]
   }
-  statement {
-    sid     = "GetAuthorizationToken"
-    effect  = "Allow"
-    actions = ["ecr:GetAuthorizationToken"]
-    resources = ["*"]
-  }
 }
